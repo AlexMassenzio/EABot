@@ -4,7 +4,7 @@ plugins {
   id 'com.github.johnrengelman.shadow' version '1.2.4'
 }
 
-mainClassName = 'com.EABot.jda.Bot'
+mainClassName = 'com.alexmassenzio.EABot'
 
 version '1.0'
 

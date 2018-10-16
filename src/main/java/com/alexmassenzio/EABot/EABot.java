@@ -32,12 +32,12 @@ public class EABot extends ListenerAdapter
 		String token = config.get(0);
 		
 		//Create jda builder and initialize values
-		JDABuilder builder = new JDABuilder(AccountType.BOT);
-		builder.setGame(Game.of(GameType.WATCHING, "your every move."));
-		builder.setStatus(OnlineStatus.ONLINE);
-		builder.setToken(token);
-		builder.addEventListener(new ReadyListener());
-		builder.addEventListener(new MessageReceivedListener());
+		JDABuilder builder = new JDABuilder(AccountType.BOT)
+				.setGame(Game.of(GameType.WATCHING, "your every move."))
+				.setStatus(OnlineStatus.ONLINE)
+				.setToken(token)
+				.addEventListener(new ReadyListener())
+				.addEventListener(new MessageReceivedListener());
 		
 		try {
 			JDA api = builder.build();
